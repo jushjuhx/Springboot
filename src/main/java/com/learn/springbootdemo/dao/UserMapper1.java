@@ -1,6 +1,6 @@
-package com.learn.springbootdemo.dao.mapper;
+package com.learn.springbootdemo.dao;
 
-import com.learn.springbootdemo.dao.entity.User;
+import com.learn.springbootdemo.bean.User;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 

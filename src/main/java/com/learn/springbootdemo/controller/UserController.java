@@ -1,8 +1,8 @@
 package com.learn.springbootdemo.controller;
 
-import com.learn.springbootdemo.dao.entity.User;
-import com.learn.springbootdemo.dao.mapper.UserMapper1;
-import com.learn.springbootdemo.dao.mapper.UserMapper2;
+import com.learn.springbootdemo.bean.User;
+import com.learn.springbootdemo.dao.UserMapper1;
+import com.learn.springbootdemo.dao.UserMapper2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
