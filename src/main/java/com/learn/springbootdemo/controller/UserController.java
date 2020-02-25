@@ -1,18 +1,28 @@
 package com.learn.springbootdemo.controller;
 
-import com.learn.springbootdemo.mapper.UserMapper;
+import com.learn.springbootdemo.dao.entity.User;
+import com.learn.springbootdemo.dao.mapper.UserMapper1;
+import com.learn.springbootdemo.dao.mapper.UserMapper2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UserController {
-    @Autowired(required = false)
-    private UserMapper userMapper;
+    @Autowired(required = false) //Autowired可以对类成员变量、方法及构造函数进行标注，完成自动装配的工作。
+    private UserMapper1 userMapper1;
 
-    @RequestMapping("/query")
-    public Object queryById(int id) {
-        return userMapper.queryUserById(id);
+    @Autowired(required = false)
+    private UserMapper2 userMapper2;
+
+    @RequestMapping("/query1")
+    public User query1ById(int id) {
+        return userMapper1.queryUserById(id);
+    }
+
+    @RequestMapping("/query2")
+    public User query2ById(int id) {
+        return userMapper2.searchX(id);
     }
 
 }

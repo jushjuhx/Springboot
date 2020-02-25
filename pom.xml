@@ -51,6 +51,7 @@
         </dependency>
     </dependencies>
 
+    <!--用于mvn package生成jar -->
     <build>
         <plugins>
             <plugin>

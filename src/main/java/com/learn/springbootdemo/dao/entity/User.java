@@ -1,4 +1,4 @@
-package com.learn.springbootdemo.bean;
+package com.learn.springbootdemo.dao.entity;
 
 public class User {
     private Long id;
