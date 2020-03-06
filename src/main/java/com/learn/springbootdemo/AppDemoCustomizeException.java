@@ -29,9 +29,15 @@ public class AppDemoCustomizeException implements WebMvcConfigurer {
      * @param id url参数
      * @return 内容
      */
-    @RequestMapping("/exceptiondemo")
+    @RequestMapping("/*")
     public String query1ById(int id) {
         return "id is :" + id;
+    }
+
+
+    @RequestMapping("/*/*")
+    public String query2ById(int id) {
+        return "depth 2. id is :" + id;
     }
 
     @Override
